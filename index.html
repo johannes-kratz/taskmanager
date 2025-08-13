@@ -4,11 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./dist/output.css" rel="stylesheet" />
-  <title>Tailwind CSS v4 Project</title>
+  <title>Task Manager</title>
 </head>
-<body class="p-8">
-  <h1 class="text-3xl font-bold underline">
-    Hello, Tailwind CSS v4!
-  </h1>
+<body class="min-h-screen bg-gray-50 p-8">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-4xl font-semibold mb-6">Task Manager</h1>
+
+    <div class="flex flex-wrap gap-4 mb-6">
+      <select id="topicFilter" class="border rounded-md px-3 py-2 bg-white">
+        <option value="all">All Topics</option>
+      </select>
+      <select id="sortSelect" class="border rounded-md px-3 py-2 bg-white">
+        <option value="dueDate">Sort by Due Date</option>
+        <option value="topic">Sort by Topic</option>
+      </select>
+    </div>
+
+    <ul id="todoList" class="space-y-4"></ul>
+  </div>
+
+  <script src="src/main.js"></script>
 </body>
 </html>
